@@ -1,0 +1,32 @@
+.container {
+  width: 71%;
+  margin: 1vh auto 5vh auto;
+  /* background-color: red; */
+}
+
+.container_stocks {
+  overflow-x: auto;
+  width: 100%;
+  margin-top: 3vh;
+  /* background-color: brown; */
+}
+
+.stocks__exchange {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+}
+
+.stocks__exchange:not(:last-child) {
+  margin-bottom: 3vh;
+}
+
+h2.exchange_title {
+  color: #C7C9C9;
+}
+
+.exchange_stock {
+  display: flex;
+}
+ 
+
