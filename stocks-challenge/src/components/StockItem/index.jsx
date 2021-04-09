@@ -1,22 +1,39 @@
-import styles from './style.module.css';
+import { useDispatch } from "react-redux";
 
-function StockItem({ company, stock, price, variation,  }) {
+import styles from './style.module.css';
+import { HeartOutlined, HeartFilled } from '@ant-design/icons';
+
+function StockItem({ stock, favorites }) {
+
+  const dispatch = useDispatch();
+
+  const addFavoriteStock = (favoriteStock) => {
+    dispatch({ type: "ADD_FAVORITE_STOCK", stock: favoriteStock })
+  }
+
+  const addVizualizeStock = (vizualizeStock) => {
+    dispatch({ type: "ADD_VISUALIZE_STOCK", stock: vizualizeStock })
+  }
 
   return (
     <>
-        <div className={styles.stock__item}>
-          <div className={styles.stock__item_name}>
-            <h3 className={styles.stock__name}>{company}</h3>
-            <h4 className={styles.stock__stock}>{stock}</h4>
-          </div>
+      <div className={styles.stock__item} onClick={() => addVizualizeStock(stock)}>
 
-          <div className={styles.stock__item_value}>
-            <p className={styles.stock__price}>R$ {price}</p>
-            <p className={(variation < 0 ? styles.stock__variation_negative : styles.stock__variation_positive)}>{variation.toFixed(2).replaceAll('.', ',')}</p>
-          </div>
-
-          <p className={styles.stock__variation_complete}>Ver variação completa</p>
+        <div className={styles.stock_first_part}>
+          <h4 className={styles.stock__stock}>{stock.stock}</h4>
+          {favorites ?
+            <HeartFilled className={styles.item_favorite_icon} /> :
+            <HeartOutlined className={styles.item_favorite_icon} onClick={() => addFavoriteStock(stock)} />
+          }
         </div>
+
+        <div className={styles.stock_second_part}>
+          <p className={styles.stock__price}>
+            {stock.country !== "BR" ? "$ " : "R$ "}
+           {stock.price.toFixed(2).replace(".", ",")}</p>
+          <p className={(stock.variation < 0 ? styles.stock__variation_negative : styles.stock__variation_positive)}>{stock.variation.toFixed(2).replace('.', ',')}</p>
+        </div>
+      </div>
     </>
   );
 }
