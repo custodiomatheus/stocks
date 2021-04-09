@@ -59,8 +59,10 @@ function StockChart() {
           <p className={styles.stock__stock}>{visualizeStock.stock}</p>
         </div>
         <div>
-          <p className={styles.stock__price}>{visualizeStock.price ? `R$ ${visualizeStock.price}` : ""}</p>
-          <p className={(visualizeStock.variation < 0 ? styles.stock__variation_negative : styles.stock__variation_positive)}>{visualizeStock.variation}</p>
+          <p className={styles.stock__price}>{visualizeStock.price ? `R$ ${visualizeStock.price.toFixed(2).replace('.', ',')}` : ""}</p>
+          <p className={(visualizeStock.variation < 0 ? styles.stock__variation_negative : styles.stock__variation_positive)}>
+            {visualizeStock.variation ? `${visualizeStock.variation.toFixed(2).replace('.', ',')}%` : ""}
+          </p>
         </div>
       </div>
 

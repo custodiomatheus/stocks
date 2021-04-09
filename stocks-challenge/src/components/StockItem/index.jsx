@@ -29,8 +29,10 @@ function StockItem({ stock, favorites }) {
         <div className={styles.stock_second_part}>
           <p className={styles.stock__price}>
             {stock.country !== "BR" ? "$ " : "R$ "}
-           {stock.price.toFixed(2).replace(".", ",")}</p>
-          <p className={(stock.variation < 0 ? styles.stock__variation_negative : styles.stock__variation_positive)}>{stock.variation.toFixed(2).replace('.', ',')}</p>
+            {stock.price.toFixed(2).replace(".", ",")}</p>
+          <p className={(stock.variation < 0 ? styles.stock__variation_negative : styles.stock__variation_positive)}>
+            {stock.variation ? `${stock.variation.toFixed(2).replace('.', ',')}%` : ""}
+          </p>
         </div>
       </div>
     </>

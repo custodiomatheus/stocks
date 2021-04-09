@@ -9,7 +9,7 @@ h3, h4, p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #14181A;
+    background-color: var(--color-background-dark);
     cursor: pointer;
 }
 
@@ -29,7 +29,7 @@ h3, h4, p {
 .stock__stock {
     font-size: 16px;
     font-weight: bold;
-    color: #E5E5E5;
+    color: var(--color-text-grey-lighter);
 }
 
 .item_favorite_icon {
@@ -48,7 +48,7 @@ h3, h4, p {
 }
 
 .stock__price {
-    color: #E5E5E5;
+    color: var(--color-text-grey-lighter);
     font-size: 15px;
     font-weight: bold;
 }
@@ -56,11 +56,11 @@ h3, h4, p {
 .stock__variation_negative {
     font-size: 15px;
     font-weight: bold;
-    color: red;
+    color: var(--color-text-negative);
 }
 
 .stock__variation_positive {
     font-size: 16px;
     font-weight: bold;
-    color: green;
+    color: var(--color-text-positive);
 }

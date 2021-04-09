@@ -13,7 +13,7 @@
 }
 
 h2.exchange_title {
-  color: #c7c9c9;
+  color: var(--color-text-grey);
   font-size: 18px;
   margin-left: 15px;
 }

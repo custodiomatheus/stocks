@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import styles from './style.module.css';
 
 import StockChart from "../../components/StockChart";

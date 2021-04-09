@@ -9,11 +9,11 @@
 .stock__stock {
   font-size: 16px;
   font-weight: bold;
-  color: #e5e5e5;
+  color: var(--color-text-grey-lighter);
 }
 
 .stock__price {
-  color: #e5e5e5;
+  color: var(--color-text-grey-lighter);
   font-size: 15px;
   font-weight: bold;
 }
@@ -21,19 +21,19 @@
 .stock__variation_negative {
   font-size: 15px;
   font-weight: bold;
-  color: red;
+  color: var(--color-text-negative);
 }
 
 .stock__variation_positive {
   font-size: 16px;
   font-weight: bold;
-  color: green;
+  color: var(--color-text-positive);
 }
 
 .stock_chart {
   width: 100%;
   height: 90%;
-  border: 2px solid #B4B6B7;
+  border: 2px solid #fff;
   border-radius: 5px;
   background-color: #fff;
 }

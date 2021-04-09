@@ -1,6 +1,6 @@
 header {
     width: 100%;
     height: 13vh;
-    background-color: #14181A;
+    background-color: var(--color-background-dark);
     grid-column: 2/3;
 }

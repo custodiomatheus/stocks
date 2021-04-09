@@ -1,3 +1,12 @@
+html {
+  --color-background-dark: #14181A;
+  --color-background-grey: #3D474C;
+  --color-text-grey: #C7C9C9;
+  --color-text-grey-lighter: #E5E5E5;
+  --color-text-negative: #EA2027;
+  --color-text-positive: #009432; 
+}
+
 body {
   margin: 0;
   padding: 0;

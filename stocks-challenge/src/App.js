@@ -1,4 +1,4 @@
-import styles from "./App.module.css";
+import "./App.module.css";
 import { useState } from "react";
 import { Provider } from 'react-redux';
 import store from "./store";
