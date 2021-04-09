@@ -5,10 +5,11 @@ import store from "./store";
 
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import StocksChart from './components/StockChart';
+import ChartContainer from "./page/ChartContainer";
 
 function App() {
   const [favorites, setFavorites] = useState(false);
+
 
   return (
     <Provider store={store}>
@@ -18,17 +19,7 @@ function App() {
         
         <Sidebar favorites={favorites} />
 
-        <section className={styles.container_chart}>
-          <div className={styles.container_pages}>
-            <span className={styles.pages_item} onClick={() => setFavorites(false)}>Ações</span>
-            <span className={styles.pages_item} onClick={() => setFavorites(true)}>Favoritos</span>
-          </div>
-
-          <div className={styles.chart}>
-            <StocksChart />
-          </div>
-          
-        </section>
+        <ChartContainer toogleFavorite={setFavorites} />
 
       </main>
     </Provider>
