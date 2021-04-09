@@ -18,7 +18,6 @@ function StockItem({ stock, favorites }) {
   return (
     <>
       <div className={styles.stock__item} onClick={() => addVizualizeStock(stock)}>
-
         <div className={styles.stock_first_part}>
           <h4 className={styles.stock__stock}>{stock.stock}</h4>
           {favorites ?
