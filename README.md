@@ -1,8 +1,37 @@
 # Stocks
 
-## Passo a passo para rodar o projeto
-1. Para rodar esse projeto você irá precisar de ter instalado em sua máquina o NodeJs
-2. Caso já tenha instalado baixe o repositório em sua máquina através do **git clone** ou baixando o **projeto zip**
-4. Em seguida acesse a pasta Stocks usando o cd Stocks
-5. Rode o comando **npm i** e espere ele baixar todas as bibliotecas do projeto
-6. Agora você já pode rodar o projeto com o comando **npm start**
+
+## How run the project
+
+### Requests
+Have the NodeJs version ≥ 10.15 installed on your computer.
+With the NodeJs installed, follow the steps below ;)
+
+1. Clone the repository, you can dowload the .zip or use the follow command
+```bash
+git clone https://github.com/custodiomatheus/stocks.git
+```
+2. Access the project folder
+```bash
+cd stocks
+```
+3. Run the command below to install all project dependencies
+```bash
+npm install
+```
+PS: this can take a few seconds....
+
+4. Run the command below to initialize the project
+```bash
+npm start
+```
+5. Last but not least, open some browser in the follow url
+http://localhost:3000
+
+![Pagina inicial](./index.png)
+
+## Technologies
+* react
+* react-charts
+* react-redux
+* redux
